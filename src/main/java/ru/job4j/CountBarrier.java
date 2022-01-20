@@ -13,8 +13,8 @@ public class CountBarrier {
     }
 
     public synchronized void count() {
-        monitor.notifyAll();
         count++;
+        monitor.notifyAll();
     }
 
     public synchronized void await() {
