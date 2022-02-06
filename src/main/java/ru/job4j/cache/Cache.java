@@ -27,4 +27,8 @@ public class Cache {
     public void delete(Base model) {
         memory.remove(model.getId());
     }
+
+    public Integer size() {
+        return memory.size();
+    }
 }
