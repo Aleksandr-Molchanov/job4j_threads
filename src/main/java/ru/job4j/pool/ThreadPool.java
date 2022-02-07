@@ -48,4 +48,15 @@ public class ThreadPool {
             }
         }
     }
+
+    public static void main(String[] args) {
+        ThreadPool threadPool = new ThreadPool();
+        for (int i = 0; i < 100; i++) {
+            int num = i;
+            threadPool.work(
+                    () -> System.out.println("Нить " + Thread.currentThread().getName() + " выполнила задачу " + num)
+            );
+        }
+        threadPool.shutdown();
+    }
 }
