@@ -23,7 +23,7 @@ public class ParallelIndexSearch<T> extends RecursiveTask<Integer> {
     @Override
     protected Integer compute() {
         if (from - to < 10) {
-            for (int i = from; i < to; i++) {
+            for (int i = from; i <= to; i++) {
                 if (array[i].equals(object)) {
                     return i;
                 }
